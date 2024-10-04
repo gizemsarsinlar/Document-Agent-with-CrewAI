@@ -35,3 +35,12 @@ def pdf_agent(self):
         verbose=True,
         llm=self.OpenAIGPT4,
     )
+
+def writer_agent(self):
+    return Agent(
+        role="Writer",
+        backstory=dedent(f"""You have loved writing summaries all your life."""),
+        goal=dedent(f"""Take the information from the PDF agent and summarize it nicely."""),
+        verbose=True,
+        llm=self.OpenAIGPT35,
+    )
